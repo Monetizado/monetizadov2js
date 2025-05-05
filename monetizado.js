@@ -389,13 +389,11 @@ window[monetizadoProp] = {
         if(contractPublic != undefined) {
             const query = contractPublic.methods.pay(creatorId,sequenceId);
             const encodedABI = query.encodeABI();
-            const gasPrice = Web3.utils.toHex(await Web3.eth.getGasPrice());
 
 			const paramsForEIP1559 = { from: account, 
 				to: contractNetwork,
 				data: encodedABI,
-				value: Web3.utils.numberToHex(amount),
-				gasLimit: '0x5208'};
+				value: Web3.utils.numberToHex(amount)};
 
             var payContentId = await ethereum
             .request({
@@ -431,12 +429,10 @@ window[monetizadoProp] = {
 			if(contractPublic != undefined) {
 				const query = contractPublic.methods.withdraw(sequenceId,amount);
 				const encodedABI = query.encodeABI();
-				const gasPrice = Web3.utils.toHex(await Web3.eth.getGasPrice());
 
 				const paramsForEIP1559 = { from: account, 
 					to: contractNetwork,
-					data: encodedABI,
-					gasLimit: '0x5208'};
+					data: encodedABI};
 
 				var withdrawMoneyFromContentId = await ethereum
 				.request({

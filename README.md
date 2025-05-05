@@ -14,7 +14,7 @@ MonetizadoJS is the library that allows you to implement [Monetizado](https://gi
 
 2. Download and import monetizadov2.js
 ```
-<script src="./monetizadov2.js"></script>
+<script src="./monetizado.js"></script>
 ```
 
 3. [Create the protected content using the smart contract](https://github.com/Monetizado/Contractsv2) or in the [Manager](https://monetizado.github.io/manager/)
